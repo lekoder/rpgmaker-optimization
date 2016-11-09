@@ -29,5 +29,5 @@ structure of game.
 
 ## Recomendations
 
-I recomend updating PIXI.js rendering engine to latest version. You can get
+I recommend  updating PIXI.js rendering engine to latest version. You can get
 latest stable release here: http://pixijs.download/release/pixi.min.js
