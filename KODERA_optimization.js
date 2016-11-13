@@ -3,7 +3,7 @@
 //=============================================================================
 
 /*:
- * @plugindesc v1.0.0 - Speed up core RPG Maker engine
+ * @plugindesc 1.0.1 Speed up core RPG Maker engine
  * @author Mariusz 'koder' Chwalba
  *
  * @help This plugin exchanges various elements of core RPG Maker engine with
@@ -20,7 +20,8 @@
 (function () {
 
     Sprite.prototype.update = function () {
-        for (var i = 0; i < this.children.length; i++) {
+        var l = this.children.length;
+        for (var i = 0; i < l; i++) {
             var child = this.children[i];
             if (child.update) {
                 child.update();
@@ -30,7 +31,8 @@
     Tilemap.prototype.update = function () {
         this.animationCount++;
         this.animationFrame = Math.floor(this.animationCount / 30);
-        for (var i = 0; i < this.children.length; i++) {
+        var l = this.children.length;
+        for (var i = 0; i < l; i++) {
             var child = this.children[i];
             if (child.update) {
                 child.update();
@@ -43,7 +45,8 @@
         }
     };
     TilingSprite.prototype.update = function () {
-        for (var i = 0; i < this.children.length; i++) {
+        var l = this.children.length;
+        for (var i = 0; i < l; i++) {
             var child = this.children[i];
             if (child.update) {
                 child.update();
@@ -54,7 +57,8 @@
         if (this.active) {
             this._animationCount++;
         }
-        for (var i = 0; i < this.children.length; i++) {
+        var l = this.children.length;
+        for (var i = 0; i < l; i++) {
             var child = this.children[i];
             if (child.update) {
                 child.update();
@@ -62,7 +66,8 @@
         }
     };
     WindowLayer.prototype.update = function () {
-        for (var i = 0; i < this.children.length; i++) {
+        var l = this.children.length;
+        for (var i = 0; i < l; i++) {
             var child = this.children[i];
             if (child.update) {
                 child.update();
@@ -77,7 +82,8 @@
         while (this._sprites.length > maxSprites) {
             this._removeSprite();
         }
-        for (var i = 0; i < this._sprites.length; i++) {
+        var l = this._sprites.length;
+        for (var i = 0; i < l; i++) {
             var sprite = this._sprites[i];
             this._updateSprite(sprite);
             sprite.x = sprite.ax - this.origin.x;
@@ -86,7 +92,8 @@
     };
     Scene_Base.prototype.updateChildren = function () {
         var i;
-        for (i = 0; i < this.children.length; i++) {
+        var l = this.children.length;
+        for (i = 0; i < l; i++) {
             var child = this.children[i];
             if (child.update) {
                 child.update();
