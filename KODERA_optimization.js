@@ -3,7 +3,7 @@
 //=============================================================================
 
 /*:
- * @plugindesc 1.0.1 Speed up core RPG Maker engine
+ * @plugindesc 1.0.2 Speed up core RPG Maker engine
  * @author Mariusz 'koder' Chwalba
  *
  * @help This plugin exchanges various elements of core RPG Maker engine with
@@ -16,14 +16,13 @@
  * implied or otherwise, is given. Attribution required in reasonable place
  * (credits). 
  */
-
 (function () {
 
     Sprite.prototype.update = function () {
         var l = this.children.length;
         for (var i = 0; i < l; i++) {
             var child = this.children[i];
-            if (child.update) {
+            if (child && child.update) {
                 child.update();
             }
         };
@@ -34,7 +33,7 @@
         var l = this.children.length;
         for (var i = 0; i < l; i++) {
             var child = this.children[i];
-            if (child.update) {
+            if (child && child.update) {
                 child.update();
             }
         }
@@ -48,7 +47,7 @@
         var l = this.children.length;
         for (var i = 0; i < l; i++) {
             var child = this.children[i];
-            if (child.update) {
+            if (child && child.update) {
                 child.update();
             }
         }
@@ -60,7 +59,7 @@
         var l = this.children.length;
         for (var i = 0; i < l; i++) {
             var child = this.children[i];
-            if (child.update) {
+            if (child && child.update) {
                 child.update();
             }
         }
@@ -69,7 +68,7 @@
         var l = this.children.length;
         for (var i = 0; i < l; i++) {
             var child = this.children[i];
-            if (child.update) {
+            if (child && child.update) {
                 child.update();
             }
         }
