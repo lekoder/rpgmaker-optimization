@@ -3,7 +3,7 @@
 //=============================================================================
 
 /*:
- * @plugindesc 1.0.2 Speed up core RPG Maker engine
+ * @plugindesc 1.0.3 Speed up core RPG Maker engine
  * @author Mariusz 'koder' Chwalba
  *
  * @help This plugin exchanges various elements of core RPG Maker engine with
@@ -116,7 +116,7 @@
         if (this._duration > 0) {
             var frameIndex = this.currentFrameIndex();
             this.updateAllCellSprites(this._animation.frames[frameIndex]);
-            for (var i = 0; i < this._animation.timings; i++) {
+            for (var i = 0; i < this._animation.timings.length; i++) {
                 var timing = this._animation.timings[i];
                 if (timing.frame === frameIndex) {
                     this.processTimingData(timing);
