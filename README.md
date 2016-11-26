@@ -29,5 +29,6 @@ structure of game.
 
 ## Recomendations
 
-I recommend  updating PIXI.js rendering engine to latest version. You can get
-latest stable release here: http://pixijs.download/release/pixi.min.js
+I recommend  updating PIXI.js rendering engine to 4.1.1. You can get this
+release here: https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.1.1/pixi.min.js
+PIXI.js 4.2.2 is not compatible with RPG Maker just yet.
