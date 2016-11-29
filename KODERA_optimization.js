@@ -103,10 +103,11 @@
     Scene_ItemBase.prototype.applyItem = function () {
         var action = new Game_Action(this.user());
         action.setItemObject(this.item());
+        var repeats = action.numRepeats();
         var ita = this.itemTargetActors();
         for (var i = 0; i < ita.length; i++) {
             var target = ita[i];
-            for (var i = 0; i < action.numRepeats(); i++) {
+            for (var ix = 0; ix < repeats; ix++) {
                 action.apply(target);
             }
         };
